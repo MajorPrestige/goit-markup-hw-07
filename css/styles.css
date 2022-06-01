@@ -11,6 +11,7 @@
    --items: 1;
    --indent: 30px;
 }
+
 body {
    font-family: 'Roboto', sans-serif;
    color: var(--text-color);
@@ -18,6 +19,7 @@ body {
    font-size: 14px;
    letter-spacing: 0.03em;
 }
+
 h1,
 h2,
 h3,
@@ -29,6 +31,7 @@ ul {
    margin: 0;
    padding: 0;
 }
+
 img {
    display: block;
 }
@@ -38,18 +41,21 @@ img {
 .list {
    list-style: none;
 }
+
 .link {
    text-decoration: none;
    color: var(--text-color);
    padding: 0;
    margin: 0;
 }
+
 .section-title {
    font-weight: 700;
    font-size: 36px;
    line-height: 1.17;
    text-align: center;
 }
+
 .container {
    width: 1200px;
    margin-left: auto;
@@ -57,15 +63,18 @@ img {
    padding-left: 15px;
    padding-right: 15px;
 }
+
 .section {
    padding-top: 94px;
    padding-bottom: 94px;
 }
+
 .flex-container {
    display: flex;
    flex-wrap: wrap;
    align-items: baseline;
 }
+
 .hidden {
    position: absolute;
    white-space: nowrap;
@@ -78,20 +87,24 @@ img {
    clip-path: inset(50%);
    margin: -1px;
 }
-/*
+
+/* 
    |============================
    | Grid in flex-box
    |============================
 */
+
 .grid {
    display: flex;
    flex-wrap: wrap;
    margin: calc(-1 * var(--indent) / 2);
 }
+
 .grid-item {
    flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
    margin: calc(var(--indent) / 2);
 }
+
 .btn {
    display: flex;
    align-items: center;
@@ -112,41 +125,23 @@ img {
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 /** HEADER */
+
 .header {
    border-bottom: 1px solid #ececec;
 }
-.nav-bar {
-   display: flex;
-   margin-left: auto;
-}
-.contact.link {
-   display: flex;
-   align-items: center;
-}
-.nav-svg {
-   margin-right: 10px;
-   fill: var(--second-text-color);
 
-   transition-property: fill;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.header-flex {
+.header__container {
    display: flex;
    align-items: center;
 }
-/*! 2 способа запомнить  */
-/* .nav-item:not(:first-child) {
-   margin-left: 50px;
-} */
-.nav-item + .nav-item {
-   margin-left: 50px;
-}
+
+/* logo */
+
 .logo {
    display: block;
    padding: 24px 0;
-   margin-right: 93px;
 
    font-family: 'Raleway', sans-serif;
    font-weight: 700;
@@ -154,16 +149,34 @@ img {
    line-height: 1.19;
    color: #000000;
 }
-.logo-web {
+
+.logo--header {
+   margin-right: 93px;
+}
+
+.logo--accent {
    color: var(--accent-color);
 }
-.logo-studio {
-   color: var(--main-color);
+
+/*  navigation */
+
+.nav {
+   display: flex;
+   margin-left: auto;
 }
-.nav-link,
-.contact {
+
+.nav__item {
+   position: relative;
+}
+
+.nav__item:not(:first-child) {
+   margin-left: 50px;
+}
+
+.nav__link {
    padding: 32px 0;
-   display: block;
+   display: flex;
+   align-items: center;
 
    font-weight: 500;
    line-height: 1.14;
@@ -174,13 +187,8 @@ img {
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact {
-   color: var(--second-text-color);
-}
-.nav-item {
-   position: relative;
-}
-.current::after {
+
+.nav__link--current::after {
    content: '';
    display: block;
    width: 100%;
@@ -191,17 +199,32 @@ img {
    border-radius: 2px;
    background-color: var(--accent-color);
 }
-.nav-link:hover,
-.nav-link:focus,
-.contact:focus,
-.contact:hover,
-.current {
+
+.nav__link--contact {
+   color: var(--second-text-color);
+}
+
+.nav__icon {
+   margin-right: 10px;
+   fill: var(--second-text-color);
+
+   transition-property: fill;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav__link:hover,
+.nav__link:focus,
+.nav__link--contact:focus,
+.nav__link--contact:hover,
+.nav__link--current {
    color: var(--accent-color);
 }
-.nav-link:hover .nav-svg,
-.nav-link:focus .nav-svg,
-.contact:focus .nav-svg,
-.contact:hover .nav-svg {
+
+.nav__link:hover .nav__icon,
+.nav__link:focus .nav__icon,
+.nav__link--contact:focus .nav__icon,
+.nav__link--contact:hover .nav__icon {
    fill: currentColor;
 }
 
@@ -543,6 +566,9 @@ img {
    padding-top: 60px;
    background-color: var(--second-theme-color);
    padding-bottom: 60px;
+}
+.logo--color {
+   color: var(--main-color);
 }
 .footer .logo {
    padding: 0;
