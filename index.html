@@ -21,7 +21,7 @@
       <link rel="stylesheet" href="./css/styles.css" />
    </head>
    <body>
-      <!-- head of title -->
+      <!-- content of header -->
       <header class="header">
          <div class="container header__container">
             <!-- navigation -->
@@ -390,63 +390,67 @@
             </div>
          </section>
       </main>
+
       <!-- content of footer -->
       <footer class="footer">
-         <div class="container flex-container">
-            <!-- logo -->
-            <div class="footer-address">
-               <a class="logo link" href="./index.html">
-                  <span class="logo--web">Web</span><span class="logo--color">Studio</span>
+         <div class="container footer__container">
+            <!-- footer address -->
+            <div>
+               <!-- logo -->
+               <a class="logo logo--footer link" href="./index.html">
+                  <span class="logo--accent">Web</span><span class="logo--color">Studio</span>
                </a>
                <address class="address">
                   <ul class="list">
-                     <li class="address-item">
-                        <a class="footer-physical link" href="">г. Киев, пр-т Леси Украинки, 26</a>
+                     <li class="address__item">
+                        <a class="address__link address__link--physical link" href="https://goo.gl/maps/hUmjc3DChhBKbwpk7">г. Киев, пр-т Леси Украинки, 26</a>
                      </li>
-                     <li class="address-item">
-                        <a class="footer-contact link" href="mailto:info@devstudio.com"
+                     <li class="address__item">
+                        <a class="address__link link" href="mailto:info@devstudio.com"
                            >info@devstudio.com</a
                         >
                      </li>
-                     <li class="address-item">
-                        <a class="footer-contact link" href="tel:+380961111111"
+                     <li class="address__item">
+                        <a class="address__link link" href="tel:+380961111111"
                            >+38 096 111 11 11</a
                         >
                      </li>
                   </ul>
                </address>
             </div>
-            <div class="footer-social">
-               <strong class="action">присоединяйтесь</strong>
+
+            <!-- footer socials -->
+            <div class="footer__social">
+               <strong class="footer__action">присоединяйтесь</strong>
                <ul class="social list">
                   <li class="social__item">
-                     <a class="social__link" href="https://www.instagram.com/"
-                        ><svg class="social__icon" width="20" height="20">
+                     <a class="social__link social__link--footer" href="https://www.instagram.com/"
+                        ><svg class="social__icon social_icon--footer" width="20" height="20">
                            <use href="./images/icons.svg#instagram"></use></svg
                      ></a>
                   </li>
                   <li class="social__item">
-                     <a class="social__link" href="https://twitter.com/"
-                        ><svg class="social__icon" width="20" height="20">
+                     <a class="social__link social__link--footer" href="https://twitter.com/"
+                        ><svg class="social__icon social_icon--footer" width="20" height="20">
                            <use href="./images/icons.svg#twitter"></use></svg
                      ></a>
                   </li>
                   <li class="social__item">
-                     <a class="social__link" href="https://www.facebook.com/"
-                        ><svg class="social__icon" width="20" height="20">
+                     <a class="social__link social__link--footer" href="https://www.facebook.com/"
+                        ><svg class="social__icon social_icon--footer" width="20" height="20">
                            <use href="./images/icons.svg#facebook"></use></svg
                      ></a>
                   </li>
                   <li class="social__item">
-                     <a class="social__link" href="https://www.linkedin.com/"
-                        ><svg class="social__icon" width="20" height="20">
+                     <a class="social__link social__link--footer" href="https://www.linkedin.com/"
+                        ><svg class="social__icon social_icon--footer" width="20" height="20">
                            <use href="./images/icons.svg#linkedin"></use></svg
                      ></a>
                   </li>
                </ul>
             </div>
             <div class="footer-form">
-               <strong class="action">Подпишитесь на рассылку</strong>
+               <strong class="footer__action">Подпишитесь на рассылку</strong>
                <form class="subscribe-form">
                   <input
                      class="subscribe-input"
@@ -507,7 +511,7 @@
                </label>
 
                <div>
-                  <label class="flex-container modal-agreement">
+                  <label class="footer__container modal-agreement">
                      <input class="checkbox hidden" type="checkbox" name="call-back-checkbox" />
                      <span class="modal-checkbox">
                         <svg width="16" height="15">

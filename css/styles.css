@@ -69,12 +69,6 @@ img {
    padding-bottom: 94px;
 }
 
-.flex-container {
-   display: flex;
-   flex-wrap: wrap;
-   align-items: baseline;
-}
-
 .hidden {
    position: absolute;
    white-space: nowrap;
@@ -403,7 +397,7 @@ img {
    color: var(--second-text-color);
 }
 
-/* ? workers social */
+/* workers social */
 
 .social {
    display: flex;
@@ -628,17 +622,27 @@ img {
    background-color: var(--second-theme-color);
    padding-bottom: 60px;
 }
-.logo--color {
-   color: var(--main-color);
+
+.footer__container {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: baseline;
 }
-.footer .logo {
+
+.logo--footer {
    padding: 0;
    margin-bottom: 20px;
 }
-.address-item + .address-item {
+
+.logo--color {
+   color: var(--main-color);
+}
+
+.address__item:not(:first-child) {
    margin-top: 9px;
 }
-.footer-contact {
+
+.address__link {
    font-weight: 400;
    line-height: 1.71;
    color: rgba(255, 255, 255, 0.6);
@@ -648,24 +652,26 @@ img {
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-physical {
-   color: var(--main-color);
-   font-weight: 400;
-   line-height: 1.71;
-   font-style: normal;
-}
-.footer-contact:hover,
-.footer-contact:focus {
+
+.address__link:hover,
+.address__link:focus {
    color: var(--accent-color);
 }
-.flex {
-   display: flex;
+
+.address__link--physical, 
+.address__link--physical:hover, 
+.address__link--physical:focus {
+   color: var(--main-color);
 }
-.footer-social {
+
+/* footer socials */
+
+.footer__social {
    align-items: baseline;
    margin-left: 70px;
 }
-.action {
+
+.footer__action {
    display: block;
    color: var(--main-color);
    font-weight: 700;
@@ -673,17 +679,18 @@ img {
    line-height: 1.14;
    margin-bottom: 20px;
 }
-.footer-social .social__link {
+
+.social__link--footer {
    background-color: rgba(255, 255, 255, 0.1);
    transition-property: background-color;
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-social .social__icon {
+.social_icon--footer {
    fill: var(--main-color);
 }
-.footer-social .social__link:hover,
-.footer-social .social__link:focus {
+.social__link--footer:hover,
+.social__link--footer:focus {
    background-color: var(--accent-color);
 }
 
