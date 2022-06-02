@@ -49,7 +49,7 @@ img {
    margin: 0;
 }
 
-.section-title {
+.title {
    font-weight: 700;
    font-size: 36px;
    line-height: 1.17;
@@ -314,7 +314,7 @@ img {
 
 /* * SERVICES SECTION */
 
-.services-section {
+.services {
    padding-bottom: 94px;
 }
 
@@ -355,19 +355,18 @@ img {
 .worker {
    background-color: var(--theme-color);
 }
-.worker-list {
-   display: flex;
-}
-.card {
-   text-align: center;
-   padding-top: 30px;
-   padding-bottom: 30px;
-}
-.worker-title {
+
+.worker__title {
    margin-bottom: 50px;
 }
-.worker-card {
+
+.worker__list {
+   display: flex;
+}
+
+.worker__item {
    flex-basis: 270px;
+
    background-color: var(--main-color);
    font-size: 16px;
    line-height: 1.19;
@@ -375,27 +374,41 @@ img {
       0px 2px 1px rgba(0, 0, 0, 0.2);
    border-radius: 0px 0px 4px 4px;
 }
-.worker-card + .worker-card {
-   margin-left: 30px;
+
+.worker__item:not(:last-child) {
+   margin-right: 30px;
 }
-.worker-name {
+
+.worker__wrapper {
+   text-align: center;
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+
+.worker__name {
    margin-bottom: 10px;
    font-weight: 500;
    font-size: 16px;
 }
-.worker-position {
+
+.worker__position {
    margin-bottom: 16px;
    font-weight: 400;
    color: var(--second-text-color);
 }
+
+/* ? workers social */
+
 .social {
    display: flex;
    justify-content: center;
 }
-.social-svg:not(:last-child) {
+
+.social__item:not(:last-child) {
    margin-right: 10px;
 }
-.social-link {
+
+.social__link {
    display: flex;
    width: 44px;
    height: 44px;
@@ -407,15 +420,15 @@ img {
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.social-link:hover .social-icon,
-.social-link:focus .social-icon {
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
    fill: var(--main-color);
 }
-.social-link:hover,
-.social-link:focus {
+.social__link:hover,
+.social__link:focus {
    background-color: var(--accent-color);
 }
-.social-icon {
+.social__icon {
    fill: var(--icons-color);
 
    transition-property: fill;
@@ -632,17 +645,17 @@ img {
    line-height: 1.14;
    margin-bottom: 20px;
 }
-.footer-social .social-link {
+.footer-social .social__link {
    background-color: rgba(255, 255, 255, 0.1);
    transition-property: background-color;
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-social .social-icon {
+.footer-social .social__icon {
    fill: var(--main-color);
 }
-.footer-social .social-link:hover,
-.footer-social .social-link:focus {
+.footer-social .social__link:hover,
+.footer-social .social__link:focus {
    background-color: var(--accent-color);
 }
 
