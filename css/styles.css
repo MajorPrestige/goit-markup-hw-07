@@ -231,19 +231,22 @@ img {
 /* * HERO SECTION */
 
 .hero {
-   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/hero.jpg);
-   background-color: #c4c4c4;
    margin: 0 auto;
    max-width: 1600px;
    background-position: center;
    padding-top: 200px;
    padding-bottom: 200px;
+
+   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero.jpg);
+   background-color: #c4c4c4;
 }
-.hero-title {
+
+.hero__title {
    max-width: 700px;
    margin-left: auto;
    margin-right: auto;
+
    font-weight: 900;
    font-size: 44px;
    line-height: 1.36;
@@ -252,45 +255,56 @@ img {
    text-transform: uppercase;
    color: var(--main-color);
 }
-.hero-button {
+
+.hero__btn {
    margin-top: 30px;
    margin-left: auto;
    margin-right: auto;
    padding: 10px 32px;
 }
+
 .btn:focus,
 .btn:hover {
    background-color: #188ce8;
 }
 
 /* * FEATURES SECTION */
+
 .features {
    display: flex;
 }
-.features-item {
+
+.features__item {
    flex-basis: 270px;
 }
-.features-item + .features-item {
-   margin-left: 30px;
+
+.features__item:not(:last-child) {
+   margin-right: 30px;
 }
-.features-svg {
+
+.features__box {
    display: flex;
-   width: 270px;
-   height: 120px;
-   background-color: var(--theme-color);
    align-items: center;
    justify-content: center;
-   border-radius: 4px;
+   width: 270px;
+   height: 120px;
    margin-bottom: 30px;
+
+   background-color: var(--theme-color);
+   border-radius: 4px;
+
 }
-.features-title {
+
+.features__title {
    margin-bottom: 10px;
+
    font-weight: 700;
    line-height: 1.14;
    text-transform: uppercase;
    font-size: 14px;
 }
-.features-text {
+
+.features__text {
    font-weight: 400;
    line-height: 1.71;
    text-align: left;
@@ -641,7 +655,7 @@ img {
    width: 352px;
    height: 50px;
    padding: 15px 16px;
-   
+
    color: rgba(255, 255, 255, 0.6);
    background-color: transparent;
    outline: transparent;
@@ -668,7 +682,6 @@ img {
 .subscribe-icon {
    margin-left: 10px;
 }
-
 
 /* * Modal form */
 .backdrop {
@@ -823,7 +836,7 @@ img {
    width: 16px;
    height: 15px;
    margin-right: 7px;
-   
+
    border-radius: 2px;
    outline: 1px solid #000000;
    outline-offset: -1px;
@@ -834,7 +847,7 @@ img {
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
- /* ! СПРОСИТЬ У ЯРОСЛАВА */
+/* ! СПРОСИТЬ У ЯРОСЛАВА */
 /* .checkbox:focus-within + .modal-checkbox,
 .checkbox:checked + .modal-checkbox {
    background-color: var(--accent-color);
