@@ -9,9 +9,10 @@
    &__item {
       flex-basis: 270px;
 
-      &:not(:last-child) {
-         margin-right: 30px;
-      }
+   }
+
+   &__item:not(:last-child) {
+      margin-right: 30px;
    }
 
    &__box {
