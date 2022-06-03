@@ -6,14 +6,21 @@
 @import "./base/base";
 @import "./base/reset";
 @import "./base/container";
+@import "./base/section";
 
 // Components
 @import "./components/btn";
 @import "./components/title";
 @import "./components/logo";
+@import "./components/social";
+@import "./components/modals";
 
 // Layouts
 @import "./layouts/header";
 @import "./layouts/hero";
 @import "./layouts/features";
-@import "./layouts/services.scss";
+@import "./layouts/services";
+@import "./layouts/worker";
+@import "./layouts/clients";
+@import "./layouts/portfolio";
+@import "./layouts/footer";
