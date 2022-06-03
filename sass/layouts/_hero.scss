@@ -8,30 +8,25 @@
    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/hero.jpg);
    background-color: #c4c4c4;
-}
 
-.hero__title {
-   max-width: 700px;
-   margin-left: auto;
-   margin-right: auto;
+   &__title {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+   
+      font-weight: 900;
+      font-size: 44px;
+      line-height: 1.36;
+      text-align: center;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--main-color);
+   }
 
-   font-weight: 900;
-   font-size: 44px;
-   line-height: 1.36;
-   text-align: center;
-   letter-spacing: 0.06em;
-   text-transform: uppercase;
-   color: var(--main-color);
-}
-
-.hero__btn {
-   margin-top: 30px;
-   margin-left: auto;
-   margin-right: auto;
-   padding: 10px 32px;
-}
-
-.btn:focus,
-.btn:hover {
-   background-color: #188ce8;
+   &__btn {
+      margin-top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px 32px;
+   }
 }

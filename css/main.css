@@ -88,6 +88,10 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.btn:focus, .btn:hover {
+  background-color: #188ce8;
+}
+
 .title {
   font-weight: 700;
   font-size: 36px;
@@ -533,11 +537,6 @@ img {
   margin-left: auto;
   margin-right: auto;
   padding: 10px 32px;
-}
-
-.btn:focus,
-.btn:hover {
-  background-color: #188ce8;
 }
 
 .features {
