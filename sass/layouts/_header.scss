@@ -1,0 +1,79 @@
+.header {
+   border-bottom: 1px solid #ececec;
+}
+
+.header__container {
+   display: flex;
+   align-items: center;
+}
+
+
+/* header navigation */
+
+.nav {
+   display: flex;
+   margin-left: auto;
+}
+
+.nav__item {
+   position: relative;
+}
+
+.nav__item:not(:first-child) {
+   margin-left: 50px;
+}
+
+.nav__link {
+   padding: 32px 0;
+   display: flex;
+   align-items: center;
+
+   font-weight: 500;
+   line-height: 1.14;
+   letter-spacing: 0.02em;
+   color: var(--text-color);
+
+   transition-property: color;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav__link--current::after {
+   content: '';
+   display: block;
+   width: 100%;
+   height: 4px;
+   position: absolute;
+   bottom: -1px;
+
+   border-radius: 2px;
+   background-color: var(--accent-color);
+}
+
+.nav__link--contact {
+   color: var(--second-text-color);
+}
+
+.nav__icon {
+   margin-right: 10px;
+   fill: var(--second-text-color);
+
+   transition-property: fill;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav__link:hover,
+.nav__link:focus,
+.nav__link--contact:focus,
+.nav__link--contact:hover,
+.nav__link--current {
+   color: var(--accent-color);
+}
+
+.nav__link:hover .nav__icon,
+.nav__link:focus .nav__icon,
+.nav__link--contact:focus .nav__icon,
+.nav__link--contact:hover .nav__icon {
+   fill: currentColor;
+}
