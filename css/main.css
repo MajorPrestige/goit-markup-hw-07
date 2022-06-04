@@ -8,6 +8,26 @@
   --icons-color: #afb1b8;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  background-color: var(--main-color);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
 .hidden {
   position: absolute;
   white-space: nowrap;
@@ -19,14 +39,6 @@
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  color: var(--text-color);
-  background-color: var(--main-color);
-  font-size: 14px;
-  letter-spacing: 0.03em;
 }
 
 h1,
@@ -64,11 +76,6 @@ img {
   padding-right: 15px;
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .btn {
   display: flex;
   align-items: center;
@@ -90,13 +97,6 @@ img {
 
 .btn:focus, .btn:hover {
   background-color: #188ce8;
-}
-
-.title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
 }
 
 .logo {
@@ -136,6 +136,13 @@ img {
   margin-right: 10px;
 }
 
+.social__icon {
+  fill: var(--icons-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .social__link {
   display: flex;
   width: 44px;
@@ -148,21 +155,13 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social__link:hover .social__icon,
-.social__link:focus .social__icon {
-  fill: var(--main-color);
-}
-
-.social__link:hover,
-.social__link:focus {
+.social__link:hover, .social__link:focus {
   background-color: var(--accent-color);
 }
 
-.social__icon {
-  fill: var(--icons-color);
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+  fill: var(--main-color);
 }
 
 /* footer socials */
@@ -187,13 +186,12 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social_icon--footer {
-  fill: var(--main-color);
+.social__link--footer:hover, .social__link--footer:focus {
+  background-color: var(--accent-color);
 }
 
-.social__link--footer:hover,
-.social__link--footer:focus {
-  background-color: var(--accent-color);
+.social_icon--footer {
+  fill: var(--main-color);
 }
 
 /* * Modal form */
