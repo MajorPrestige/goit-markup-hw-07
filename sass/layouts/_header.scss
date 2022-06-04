@@ -13,6 +13,14 @@
    display: flex;
    margin-left: auto;
    
+   &__icon {
+      margin-right: 10px;
+      fill: var(--second-text-color);
+   
+      transition-property: fill;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   }
 }
 
 .nav__item {
@@ -52,29 +60,19 @@
    &--contact {
       color: var(--second-text-color);
    }
-}
 
+   &:hover,
+   &:focus,
+   &--contact:focus,
+   &--contact:hover,
+   &--current {
+      color: var(--accent-color);
+   }
 
-.nav__icon {
-   margin-right: 10px;
-   fill: var(--second-text-color);
-
-   transition-property: fill;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav__link:hover,
-.nav__link:focus,
-.nav__link--contact:focus,
-.nav__link--contact:hover,
-.nav__link--current {
-   color: var(--accent-color);
-}
-
-.nav__link:hover .nav__icon,
-.nav__link:focus .nav__icon,
-.nav__link--contact:focus .nav__icon,
-.nav__link--contact:hover .nav__icon {
-   fill: currentColor;
+   &:hover .nav__icon,
+   &:focus .nav__icon,
+   &--contact:focus .nav__icon,
+   &--contact:hover .nav__icon {
+      fill: currentColor;
+   }
 }
